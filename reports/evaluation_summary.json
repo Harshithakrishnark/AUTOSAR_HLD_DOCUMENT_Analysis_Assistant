@@ -1,0 +1,30 @@
+{
+  "selected_model": "Random Forest",
+  "dataset_size": 32,
+  "training_samples": 24,
+  "test_samples": 8,
+  "results": [
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.625,
+      "weighted_precision": 0.5625,
+      "weighted_recall": 0.625,
+      "weighted_f1": 0.5892857142857143
+    },
+    {
+      "model": "Decision Tree",
+      "accuracy": 0.5,
+      "weighted_precision": 0.5,
+      "weighted_recall": 0.5,
+      "weighted_f1": 0.4892857142857143
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.875,
+      "weighted_precision": 0.78125,
+      "weighted_recall": 0.875,
+      "weighted_f1": 0.8214285714285714
+    }
+  ],
+  "warning": "Results depend on dataset size, class balance, and label quality. A small test set is not sufficient for reliable generalization claims."
+}

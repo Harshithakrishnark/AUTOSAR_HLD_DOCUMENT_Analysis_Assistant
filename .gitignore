@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Generated models and uploaded documents
+models/*.joblib
+data/uploads/
+*.pdf
+
+# OS / editor
+.DS_Store
+.vscode/

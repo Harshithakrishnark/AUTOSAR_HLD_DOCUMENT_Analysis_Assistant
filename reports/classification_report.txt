@@ -1,0 +1,12 @@
+Selected model: Random Forest
+
+                        precision    recall  f1-score   support
+
+component_architecture       0.00      0.00      0.00         1
+          dependencies       0.75      1.00      0.86         3
+            interfaces       1.00      1.00      1.00         3
+ signals_communication       1.00      1.00      1.00         1
+
+              accuracy                           0.88         8
+             macro avg       0.69      0.75      0.71         8
+          weighted avg       0.78      0.88      0.82         8

@@ -1,0 +1,34 @@
+text,label
+"Engine control unit software component architecture and runnable entities",component_architecture
+"Software component ports and interfaces used to exchange data",interfaces
+"Signal mapping and communication between components",signals_communication
+"Dependency between application software components and services",dependencies
+"Component architecture and runnable entity design",component_architecture
+"Port interface mapping between software components",interfaces
+"Signal definitions and communication flow",signals_communication
+"Dependencies between components and basic software modules",dependencies
+"Software component architecture overview",component_architecture
+"Provided and required ports for an application component",interfaces
+"Signal routing between ECU software modules",signals_communication
+"Component dependency and integration relationships",dependencies
+"Architecture of application software components",component_architecture
+"Interface specifications for ports",interfaces
+"Communication signal descriptions",signals_communication
+"Dependency mapping for software integration",dependencies
+"Component overview and runnable entities",component_architecture
+"Ports and interface definitions",interfaces
+"Signal names and communication paths",signals_communication
+"Module dependencies and relationships",dependencies
+
+"The BrakeManager requires vehicle speed data from the VehicleSpeedProvider before calculating braking actions.",dependencies
+"The EngineController relies on the TemperatureMonitor output to adjust engine operation.",dependencies
+"The DashboardDisplay depends on the SensorProcessor to receive processed sensor readings.",dependencies
+"The application cannot execute its control logic until the required sensor service is available.",dependencies
+"The ClimateController depends on the CabinTemperature component for automatic temperature regulation.",dependencies
+"The DiagnosticManager uses fault information provided by the EngineController.",dependencies
+"The TemperatureMonitor provides a sender-receiver interface for temperature values.",interfaces
+"The BrakeManager defines a required port to receive vehicle speed information.",interfaces
+"The DashboardDisplay exposes a client-server interface for requesting diagnostic status.",interfaces
+"The SensorProcessor declares a provided port for processed sensor measurements.",interfaces
+"The ClimateController interface defines operations for reading cabin temperature.",interfaces
+"The DiagnosticManager uses a specified interface contract to request fault details.",interfaces
