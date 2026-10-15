@@ -1,34 +1,401 @@
 text,label
-"Engine control unit software component architecture and runnable entities",component_architecture
-"Software component ports and interfaces used to exchange data",interfaces
-"Signal mapping and communication between components",signals_communication
-"Dependency between application software components and services",dependencies
-"Component architecture and runnable entity design",component_architecture
-"Port interface mapping between software components",interfaces
-"Signal definitions and communication flow",signals_communication
-"Dependencies between components and basic software modules",dependencies
-"Software component architecture overview",component_architecture
-"Provided and required ports for an application component",interfaces
-"Signal routing between ECU software modules",signals_communication
-"Component dependency and integration relationships",dependencies
-"Architecture of application software components",component_architecture
-"Interface specifications for ports",interfaces
-"Communication signal descriptions",signals_communication
-"Dependency mapping for software integration",dependencies
-"Component overview and runnable entities",component_architecture
-"Ports and interface definitions",interfaces
-"Signal names and communication paths",signals_communication
-"Module dependencies and relationships",dependencies
-
-"The BrakeManager requires vehicle speed data from the VehicleSpeedProvider before calculating braking actions.",dependencies
-"The EngineController relies on the TemperatureMonitor output to adjust engine operation.",dependencies
-"The DashboardDisplay depends on the SensorProcessor to receive processed sensor readings.",dependencies
-"The application cannot execute its control logic until the required sensor service is available.",dependencies
-"The ClimateController depends on the CabinTemperature component for automatic temperature regulation.",dependencies
-"The DiagnosticManager uses fault information provided by the EngineController.",dependencies
-"The TemperatureMonitor provides a sender-receiver interface for temperature values.",interfaces
-"The BrakeManager defines a required port to receive vehicle speed information.",interfaces
-"The DashboardDisplay exposes a client-server interface for requesting diagnostic status.",interfaces
-"The SensorProcessor declares a provided port for processed sensor measurements.",interfaces
-"The ClimateController interface defines operations for reading cabin temperature.",interfaces
-"The DiagnosticManager uses a specified interface contract to request fault details.",interfaces
+Engine control unit software component architecture and runnable entities,component_architecture
+Software component ports and interfaces used to exchange data,interfaces
+Signal mapping and communication between components,signals_communication
+Dependency between application software components and services,dependencies
+Component architecture and runnable entity design,component_architecture
+Port interface mapping between software components,interfaces
+Signal definitions and communication flow,signals_communication
+Dependencies between components and basic software modules,dependencies
+Software component architecture overview,component_architecture
+Provided and required ports for an application component,interfaces
+Signal routing between ECU software modules,signals_communication
+Component dependency and integration relationships,dependencies
+Architecture of application software components,component_architecture
+Interface specifications for ports,interfaces
+Communication signal descriptions,signals_communication
+Dependency mapping for software integration,dependencies
+Component overview and runnable entities,component_architecture
+Ports and interface definitions,interfaces
+Signal names and communication paths,signals_communication
+Module dependencies and relationships,dependencies
+The BrakeManager requires vehicle speed data from the VehicleSpeedProvider before calculating braking actions.,dependencies
+The EngineController relies on the TemperatureMonitor output to adjust engine operation.,dependencies
+The DashboardDisplay depends on the SensorProcessor to receive processed sensor readings.,dependencies
+The application cannot execute its control logic until the required sensor service is available.,dependencies
+The ClimateController depends on the CabinTemperature component for automatic temperature regulation.,dependencies
+The DiagnosticManager uses fault information provided by the EngineController.,dependencies
+The TemperatureMonitor provides a sender-receiver interface for temperature values.,interfaces
+The BrakeManager defines a required port to receive vehicle speed information.,interfaces
+The DashboardDisplay exposes a client-server interface for requesting diagnostic status.,interfaces
+The SensorProcessor declares a provided port for processed sensor measurements.,interfaces
+The ClimateController interface defines operations for reading cabin temperature.,interfaces
+The DiagnosticManager uses a specified interface contract to request fault details.,interfaces
+The EngineController software component exposes a required port through the VehicleSpeedInterface interface.,interfaces
+The TemperatureMonitor exchanges steering angle with BatterySupervisor using the EngineDataInterface interface.,interfaces
+The DiagnosticInterface interface defines the data elements available to BodyControlModule and its connected component.,interfaces
+An interface contract specifies the door status data type provided by TorqueCoordinator.,interfaces
+The SteeringAssist requires a required port to access vehicle mode from BatterySupervisor.,interfaces
+The EngineController provides battery state of charge through a typed port for connected software components.,interfaces
+The interface description documents the operations and data elements exchanged by TemperatureMonitor.,interfaces
+The PowertrainManager and BodyControlModule share wheel speed through a compatible EngineDataInterface interface.,interfaces
+The port prototype of TorqueCoordinator is connected to an interface that defines lamp status.,interfaces
+The design review checks whether the SteeringAssist port uses the correct interface and data type.,interfaces
+The BrakeManager software component exposes a client-server port through the VehicleModeInterface interface.,interfaces
+The SensorProcessor exchanges coolant temperature with SafetyMonitor using the FaultStatusInterface interface.,interfaces
+The BrakeStatusInterface interface defines the data elements available to DoorStatusMonitor and its connected component.,interfaces
+An interface contract specifies the engine torque data type provided by DiagnosticManager.,interfaces
+The ClimateControl requires a client-server port to access ambient temperature from LightingController.,interfaces
+The BrakeManager provides brake status through a typed port for connected software components.,interfaces
+The interface description documents the operations and data elements exchanged by SensorProcessor.,interfaces
+The LightingController and DoorStatusMonitor share vehicle speed through a compatible FaultStatusInterface interface.,interfaces
+The port prototype of DiagnosticManager is connected to an interface that defines steering angle.,interfaces
+The design review checks whether the ClimateControl port uses the correct interface and data type.,interfaces
+The VehicleSpeedProvider software component exposes a sender-receiver port through the DoorStatusInterface interface.,interfaces
+The PowertrainManager exchanges fault information with SensorProcessor using the TorqueRequestInterface interface.,interfaces
+The SensorDataInterface interface defines the data elements available to BatterySupervisor and its connected component.,interfaces
+An interface contract specifies the vehicle mode data type provided by LightingController.,interfaces
+The WheelSpeedSensor requires a sender-receiver port to access battery state of charge from SensorProcessor.,interfaces
+The VehicleSpeedProvider provides sensor validity through a typed port for connected software components.,interfaces
+The interface description documents the operations and data elements exchanged by PowertrainManager.,interfaces
+The SensorProcessor and BatterySupervisor share lamp status through a compatible TorqueRequestInterface interface.,interfaces
+The port prototype of LightingController is connected to an interface that defines coolant temperature.,interfaces
+The design review checks whether the WheelSpeedSensor port uses the correct interface and data type.,interfaces
+The TemperatureMonitor software component exposes a provided port through the TemperatureInterface interface.,interfaces
+The BodyControlModule exchanges requested torque with TemperatureMonitor using the BatteryStatusInterface interface.,interfaces
+The SteeringAngleInterface interface defines the data elements available to TorqueCoordinator and its connected component.,interfaces
+An interface contract specifies the ambient temperature data type provided by SteeringAssist.,interfaces
+The EngineController requires a provided port to access brake status from TemperatureMonitor.,interfaces
+The TemperatureMonitor provides diagnostic status through a typed port for connected software components.,interfaces
+The interface description documents the operations and data elements exchanged by BodyControlModule.,interfaces
+The GatewayComponent and TorqueCoordinator share steering angle through a compatible BatteryStatusInterface interface.,interfaces
+The port prototype of SteeringAssist is connected to an interface that defines fault information.,interfaces
+The design review checks whether the EngineController port uses the correct interface and data type.,interfaces
+The SensorProcessor software component exposes a required port through the VehicleSpeedInterface interface.,interfaces
+The DoorStatusMonitor exchanges door status with VehicleSpeedProvider using the EngineDataInterface interface.,interfaces
+The DiagnosticInterface interface defines the data elements available to DiagnosticManager and its connected component.,interfaces
+An interface contract specifies the battery state of charge data type provided by ClimateControl.,interfaces
+The BrakeManager requires a required port to access sensor validity from EngineController.,interfaces
+The SensorProcessor provides wheel speed through a typed port for connected software components.,interfaces
+The interface description documents the operations and data elements exchanged by DoorStatusMonitor.,interfaces
+The BrakeManager and DiagnosticManager share coolant temperature through a compatible EngineDataInterface interface.,interfaces
+The port prototype of ClimateControl is connected to an interface that defines requested torque.,interfaces
+The design review checks whether the BrakeManager port uses the correct interface and data type.,interfaces
+The PowertrainManager software component exposes a client-server port through the VehicleModeInterface interface.,interfaces
+The BatterySupervisor exchanges engine torque with BodyControlModule using the FaultStatusInterface interface.,interfaces
+The BrakeStatusInterface interface defines the data elements available to LightingController and its connected component.,interfaces
+An interface contract specifies the brake status data type provided by WheelSpeedSensor.,interfaces
+The VehicleSpeedProvider requires a client-server port to access diagnostic status from BodyControlModule.,interfaces
+The PowertrainManager provides vehicle speed through a typed port for connected software components.,interfaces
+The interface description documents the operations and data elements exchanged by BatterySupervisor.,interfaces
+The TorqueCoordinator and LightingController share fault information through a compatible FaultStatusInterface interface.,interfaces
+The port prototype of WheelSpeedSensor is connected to an interface that defines door status.,interfaces
+The design review checks whether the VehicleSpeedProvider port uses the correct interface and data type.,interfaces
+The BodyControlModule software component exposes a sender-receiver port through the DoorStatusInterface interface.,interfaces
+The TorqueCoordinator exchanges vehicle mode with SteeringAssist using the TorqueRequestInterface interface.,interfaces
+The SensorDataInterface interface defines the data elements available to SteeringAssist and its connected component.,interfaces
+An interface contract specifies the sensor validity data type provided by EngineController.,interfaces
+The TemperatureMonitor requires a sender-receiver port to access wheel speed from ClimateControl.,interfaces
+The BodyControlModule provides lamp status through a typed port for connected software components.,interfaces
+The interface description documents the operations and data elements exchanged by TorqueCoordinator.,interfaces
+The ClimateControl and SteeringAssist share requested torque through a compatible TorqueRequestInterface interface.,interfaces
+The port prototype of EngineController is connected to an interface that defines engine torque.,interfaces
+The design review checks whether the TemperatureMonitor port uses the correct interface and data type.,interfaces
+The DoorStatusMonitor software component exposes a provided port through the TemperatureInterface interface.,interfaces
+The DiagnosticManager exchanges ambient temperature with BatterySupervisor using the BatteryStatusInterface interface.,interfaces
+The SteeringAngleInterface interface defines the data elements available to ClimateControl and its connected component.,interfaces
+An interface contract specifies the diagnostic status data type provided by BrakeManager.,interfaces
+The SensorProcessor requires a provided port to access vehicle speed from BatterySupervisor.,interfaces
+The DoorStatusMonitor provides steering angle through a typed port for connected software components.,interfaces
+The interface description documents the operations and data elements exchanged by DiagnosticManager.,interfaces
+The PowertrainManager and ClimateControl share door status through a compatible BatteryStatusInterface interface.,interfaces
+The port prototype of BrakeManager is connected to an interface that defines vehicle mode.,interfaces
+The design review checks whether the SensorProcessor port uses the correct interface and data type.,interfaces
+The BatterySupervisor software component exposes a required port through the VehicleSpeedInterface interface.,interfaces
+The LightingController exchanges battery state of charge with SafetyMonitor using the EngineDataInterface interface.,interfaces
+The DiagnosticInterface interface defines the data elements available to WheelSpeedSensor and its connected component.,interfaces
+An interface contract specifies the wheel speed data type provided by VehicleSpeedProvider.,interfaces
+The PowertrainManager requires a required port to access lamp status from LightingController.,interfaces
+The BatterySupervisor provides coolant temperature through a typed port for connected software components.,interfaces
+The interface description documents the operations and data elements exchanged by LightingController.,interfaces
+The LightingController and WheelSpeedSensor share engine torque through a compatible EngineDataInterface interface.,interfaces
+The port prototype of VehicleSpeedProvider is connected to an interface that defines ambient temperature.,interfaces
+The EngineController depends on VehicleSpeedProvider to provide the vehicle speed required during operation.,dependencies
+The execution of TemperatureMonitor requires the service supplied by BatterySupervisor.,dependencies
+A dependency exists because BodyControlModule consumes fault information produced by GatewayComponent.,dependencies
+The design records the dependency between TorqueCoordinator and VehicleSpeedProvider for steering assistance.,dependencies
+"If BatterySupervisor is unavailable, SteeringAssist may not receive the required vehicle mode.",dependencies
+The dependency analysis verifies that EngineController has access to GatewayComponent before initialization.,dependencies
+The TemperatureMonitor requires VehicleSpeedProvider to complete the body control function.,dependencies
+The architecture review traces the dependency from BodyControlModule to PowertrainManager.,dependencies
+The TorqueCoordinator relies on a service from SafetyMonitor to process lamp status.,dependencies
+Initialization order must account for the dependency between SteeringAssist and BrakeManager.,dependencies
+The BrakeManager depends on PowertrainManager to provide the lamp status required during operation.,dependencies
+The execution of SensorProcessor requires the service supplied by SafetyMonitor.,dependencies
+A dependency exists because DoorStatusMonitor consumes requested torque produced by BrakeManager.,dependencies
+The design records the dependency between DiagnosticManager and PowertrainManager for thermal management.,dependencies
+"If LightingController is unavailable, ClimateControl may not receive the required ambient temperature.",dependencies
+The dependency analysis verifies that BrakeManager has access to EngineController before initialization.,dependencies
+The SensorProcessor requires BodyControlModule to complete the vehicle-speed monitoring function.,dependencies
+The architecture review traces the dependency from DoorStatusMonitor to LightingController.,dependencies
+The DiagnosticManager relies on a service from EngineController to process steering angle.,dependencies
+Initialization order must account for the dependency between ClimateControl and BodyControlModule.,dependencies
+The VehicleSpeedProvider depends on LightingController to provide the steering angle required during operation.,dependencies
+The execution of PowertrainManager requires the service supplied by SensorProcessor.,dependencies
+A dependency exists because BatterySupervisor consumes door status produced by TorqueCoordinator.,dependencies
+The design records the dependency between LightingController and SteeringAssist for vehicle-mode management.,dependencies
+"If SensorProcessor is unavailable, WheelSpeedSensor may not receive the required battery state of charge.",dependencies
+The dependency analysis verifies that VehicleSpeedProvider has access to TorqueCoordinator before initialization.,dependencies
+The PowertrainManager requires SteeringAssist to complete the lighting control function.,dependencies
+The architecture review traces the dependency from BatterySupervisor to SensorProcessor.,dependencies
+The LightingController relies on a service from TemperatureMonitor to process coolant temperature.,dependencies
+Initialization order must account for the dependency between WheelSpeedSensor and ClimateControl.,dependencies
+The TemperatureMonitor depends on DiagnosticManager to provide the coolant temperature required during operation.,dependencies
+The execution of BodyControlModule requires the service supplied by TemperatureMonitor.,dependencies
+A dependency exists because TorqueCoordinator consumes engine torque produced by ClimateControl.,dependencies
+The design records the dependency between SteeringAssist and DiagnosticManager for body control.,dependencies
+"If TemperatureMonitor is unavailable, EngineController may not receive the required brake status.",dependencies
+The dependency analysis verifies that TemperatureMonitor has access to VehicleSpeedProvider before initialization.,dependencies
+The BodyControlModule requires BatterySupervisor to complete the torque coordination function.,dependencies
+The architecture review traces the dependency from TorqueCoordinator to GatewayComponent.,dependencies
+The SteeringAssist relies on a service from VehicleSpeedProvider to process fault information.,dependencies
+Initialization order must account for the dependency between EngineController and BatterySupervisor.,dependencies
+The SensorProcessor depends on GatewayComponent to provide the fault information required during operation.,dependencies
+The execution of DoorStatusMonitor requires the service supplied by VehicleSpeedProvider.,dependencies
+A dependency exists because DiagnosticManager consumes vehicle mode produced by PowertrainManager.,dependencies
+The design records the dependency between ClimateControl and SafetyMonitor for vehicle-speed monitoring.,dependencies
+"If EngineController is unavailable, BrakeManager may not receive the required sensor validity.",dependencies
+The dependency analysis verifies that SensorProcessor has access to PowertrainManager before initialization.,dependencies
+The DoorStatusMonitor requires SafetyMonitor to complete the fault handling function.,dependencies
+The architecture review traces the dependency from DiagnosticManager to BrakeManager.,dependencies
+The ClimateControl relies on a service from PowertrainManager to process requested torque.,dependencies
+Initialization order must account for the dependency between BrakeManager and LightingController.,dependencies
+The PowertrainManager depends on EngineController to provide the requested torque required during operation.,dependencies
+The execution of BatterySupervisor requires the service supplied by BodyControlModule.,dependencies
+A dependency exists because LightingController consumes ambient temperature produced by SteeringAssist.,dependencies
+The design records the dependency between WheelSpeedSensor and EngineController for lighting control.,dependencies
+"If BodyControlModule is unavailable, VehicleSpeedProvider may not receive the required diagnostic status.",dependencies
+The dependency analysis verifies that PowertrainManager has access to LightingController before initialization.,dependencies
+The BatterySupervisor requires SensorProcessor to complete the battery monitoring function.,dependencies
+The architecture review traces the dependency from LightingController to TorqueCoordinator.,dependencies
+The WheelSpeedSensor relies on a service from SteeringAssist to process door status.,dependencies
+Initialization order must account for the dependency between VehicleSpeedProvider and SensorProcessor.,dependencies
+The BodyControlModule depends on TorqueCoordinator to provide the door status required during operation.,dependencies
+The execution of TorqueCoordinator requires the service supplied by SteeringAssist.,dependencies
+A dependency exists because SteeringAssist consumes battery state of charge produced by SensorProcessor.,dependencies
+The design records the dependency between EngineController and TemperatureMonitor for torque coordination.,dependencies
+"If ClimateControl is unavailable, TemperatureMonitor may not receive the required wheel speed.",dependencies
+The dependency analysis verifies that BodyControlModule has access to DiagnosticManager before initialization.,dependencies
+The TorqueCoordinator requires TemperatureMonitor to complete the braking control function.,dependencies
+The architecture review traces the dependency from SteeringAssist to ClimateControl.,dependencies
+The EngineController relies on a service from DiagnosticManager to process engine torque.,dependencies
+Initialization order must account for the dependency between TemperatureMonitor and GatewayComponent.,dependencies
+The DoorStatusMonitor depends on VehicleSpeedProvider to provide the engine torque required during operation.,dependencies
+The execution of DiagnosticManager requires the service supplied by BatterySupervisor.,dependencies
+A dependency exists because ClimateControl consumes brake status produced by GatewayComponent.,dependencies
+The design records the dependency between BrakeManager and VehicleSpeedProvider for fault handling.,dependencies
+"If BatterySupervisor is unavailable, SensorProcessor may not receive the required vehicle speed.",dependencies
+The dependency analysis verifies that DoorStatusMonitor has access to GatewayComponent before initialization.,dependencies
+The DiagnosticManager requires VehicleSpeedProvider to complete the sensor validation function.,dependencies
+The architecture review traces the dependency from ClimateControl to PowertrainManager.,dependencies
+The BrakeManager relies on a service from SafetyMonitor to process vehicle mode.,dependencies
+Initialization order must account for the dependency between SensorProcessor and BrakeManager.,dependencies
+The BatterySupervisor depends on PowertrainManager to provide the vehicle mode required during operation.,dependencies
+The execution of LightingController requires the service supplied by SafetyMonitor.,dependencies
+A dependency exists because WheelSpeedSensor consumes sensor validity produced by BrakeManager.,dependencies
+The design records the dependency between VehicleSpeedProvider and PowertrainManager for battery monitoring.,dependencies
+"If LightingController is unavailable, PowertrainManager may not receive the required lamp status.",dependencies
+The dependency analysis verifies that BatterySupervisor has access to EngineController before initialization.,dependencies
+The LightingController requires BodyControlModule to complete the diagnostics function.,dependencies
+The architecture review traces the dependency from WheelSpeedSensor to LightingController.,dependencies
+The VehicleSpeedProvider relies on a service from EngineController to process ambient temperature.,dependencies
+The EngineController is modeled as an AUTOSAR software component with defined responsibilities.,component_architecture
+The TemperatureMonitor contains runnable entities that implement the torque coordination behavior.,component_architecture
+The component design separates body control logic from other application responsibilities.,component_architecture
+The architecture assigns TorqueCoordinator responsibility for processing door status.,component_architecture
+The SteeringAssist is connected to other software components through configured ports.,component_architecture
+The HLD describes the internal behavior and runnable entities of EngineController.,component_architecture
+"The TemperatureMonitor design identifies its ports, runnables, and required services.",component_architecture
+The application architecture places BodyControlModule in the monitoring layer.,component_architecture
+The TorqueCoordinator encapsulates braking control functionality within a software component boundary.,component_architecture
+The architecture document describes how SteeringAssist interacts with neighboring components.,component_architecture
+The BrakeManager is modeled as an AUTOSAR software component with defined responsibilities.,component_architecture
+The SensorProcessor contains runnable entities that implement the fault handling behavior.,component_architecture
+The component design separates vehicle-speed monitoring logic from other application responsibilities.,component_architecture
+The architecture assigns DiagnosticManager responsibility for processing engine torque.,component_architecture
+The ClimateControl is connected to other software components through configured ports.,component_architecture
+The HLD describes the internal behavior and runnable entities of BrakeManager.,component_architecture
+"The SensorProcessor design identifies its ports, runnables, and required services.",component_architecture
+The application architecture places DoorStatusMonitor in the control layer.,component_architecture
+The DiagnosticManager encapsulates sensor validation functionality within a software component boundary.,component_architecture
+The architecture document describes how ClimateControl interacts with neighboring components.,component_architecture
+The VehicleSpeedProvider is modeled as an AUTOSAR software component with defined responsibilities.,component_architecture
+The PowertrainManager contains runnable entities that implement the battery monitoring behavior.,component_architecture
+The component design separates lighting control logic from other application responsibilities.,component_architecture
+The architecture assigns LightingController responsibility for processing vehicle mode.,component_architecture
+The WheelSpeedSensor is connected to other software components through configured ports.,component_architecture
+The HLD describes the internal behavior and runnable entities of VehicleSpeedProvider.,component_architecture
+"The PowertrainManager design identifies its ports, runnables, and required services.",component_architecture
+The application architecture places BatterySupervisor in the service layer.,component_architecture
+The LightingController encapsulates diagnostics functionality within a software component boundary.,component_architecture
+The architecture document describes how WheelSpeedSensor interacts with neighboring components.,component_architecture
+The TemperatureMonitor is modeled as an AUTOSAR software component with defined responsibilities.,component_architecture
+The BodyControlModule contains runnable entities that implement the braking control behavior.,component_architecture
+The component design separates torque coordination logic from other application responsibilities.,component_architecture
+The architecture assigns SteeringAssist responsibility for processing ambient temperature.,component_architecture
+The EngineController is connected to other software components through configured ports.,component_architecture
+The HLD describes the internal behavior and runnable entities of TemperatureMonitor.,component_architecture
+"The BodyControlModule design identifies its ports, runnables, and required services.",component_architecture
+The application architecture places TorqueCoordinator in the application layer.,component_architecture
+The SteeringAssist encapsulates steering assistance functionality within a software component boundary.,component_architecture
+The architecture document describes how EngineController interacts with neighboring components.,component_architecture
+The SensorProcessor is modeled as an AUTOSAR software component with defined responsibilities.,component_architecture
+The DoorStatusMonitor contains runnable entities that implement the sensor validation behavior.,component_architecture
+The component design separates fault handling logic from other application responsibilities.,component_architecture
+The architecture assigns ClimateControl responsibility for processing battery state of charge.,component_architecture
+The BrakeManager is connected to other software components through configured ports.,component_architecture
+The HLD describes the internal behavior and runnable entities of SensorProcessor.,component_architecture
+"The DoorStatusMonitor design identifies its ports, runnables, and required services.",component_architecture
+The application architecture places DiagnosticManager in the monitoring layer.,component_architecture
+The ClimateControl encapsulates thermal management functionality within a software component boundary.,component_architecture
+The architecture document describes how BrakeManager interacts with neighboring components.,component_architecture
+The PowertrainManager is modeled as an AUTOSAR software component with defined responsibilities.,component_architecture
+The BatterySupervisor contains runnable entities that implement the diagnostics behavior.,component_architecture
+The component design separates battery monitoring logic from other application responsibilities.,component_architecture
+The architecture assigns WheelSpeedSensor responsibility for processing brake status.,component_architecture
+The VehicleSpeedProvider is connected to other software components through configured ports.,component_architecture
+The HLD describes the internal behavior and runnable entities of PowertrainManager.,component_architecture
+"The BatterySupervisor design identifies its ports, runnables, and required services.",component_architecture
+The application architecture places LightingController in the control layer.,component_architecture
+The WheelSpeedSensor encapsulates vehicle-mode management functionality within a software component boundary.,component_architecture
+The architecture document describes how VehicleSpeedProvider interacts with neighboring components.,component_architecture
+The BodyControlModule is modeled as an AUTOSAR software component with defined responsibilities.,component_architecture
+The TorqueCoordinator contains runnable entities that implement the steering assistance behavior.,component_architecture
+The component design separates braking control logic from other application responsibilities.,component_architecture
+The architecture assigns EngineController responsibility for processing sensor validity.,component_architecture
+The TemperatureMonitor is connected to other software components through configured ports.,component_architecture
+The HLD describes the internal behavior and runnable entities of BodyControlModule.,component_architecture
+"The TorqueCoordinator design identifies its ports, runnables, and required services.",component_architecture
+The application architecture places SteeringAssist in the service layer.,component_architecture
+The EngineController encapsulates body control functionality within a software component boundary.,component_architecture
+The architecture document describes how TemperatureMonitor interacts with neighboring components.,component_architecture
+The DoorStatusMonitor is modeled as an AUTOSAR software component with defined responsibilities.,component_architecture
+The DiagnosticManager contains runnable entities that implement the thermal management behavior.,component_architecture
+The component design separates sensor validation logic from other application responsibilities.,component_architecture
+The architecture assigns BrakeManager responsibility for processing diagnostic status.,component_architecture
+The SensorProcessor is connected to other software components through configured ports.,component_architecture
+The HLD describes the internal behavior and runnable entities of DoorStatusMonitor.,component_architecture
+"The DiagnosticManager design identifies its ports, runnables, and required services.",component_architecture
+The application architecture places ClimateControl in the application layer.,component_architecture
+The BrakeManager encapsulates vehicle-speed monitoring functionality within a software component boundary.,component_architecture
+The architecture document describes how SensorProcessor interacts with neighboring components.,component_architecture
+The BatterySupervisor is modeled as an AUTOSAR software component with defined responsibilities.,component_architecture
+The LightingController contains runnable entities that implement the vehicle-mode management behavior.,component_architecture
+The component design separates diagnostics logic from other application responsibilities.,component_architecture
+The architecture assigns VehicleSpeedProvider responsibility for processing wheel speed.,component_architecture
+The PowertrainManager is connected to other software components through configured ports.,component_architecture
+The HLD describes the internal behavior and runnable entities of BatterySupervisor.,component_architecture
+"The LightingController design identifies its ports, runnables, and required services.",component_architecture
+The application architecture places WheelSpeedSensor in the monitoring layer.,component_architecture
+The VehicleSpeedProvider encapsulates lighting control functionality within a software component boundary.,component_architecture
+The architecture document describes how PowertrainManager interacts with neighboring components.,component_architecture
+The TorqueCoordinator is modeled as an AUTOSAR software component with defined responsibilities.,component_architecture
+The SteeringAssist contains runnable entities that implement the body control behavior.,component_architecture
+The component design separates steering assistance logic from other application responsibilities.,component_architecture
+The architecture assigns TemperatureMonitor responsibility for processing vehicle speed.,component_architecture
+The BodyControlModule is connected to other software components through configured ports.,component_architecture
+The EngineController publishes the vehicle speed signal for consumption by VehicleSpeedProvider.,signals_communication
+The BatterySupervisor receives the steering angle signal transmitted by TemperatureMonitor.,signals_communication
+The communication mapping links the fault information signal to its receiving component.,signals_communication
+The signal configuration defines the update path for door status between components.,signals_communication
+The SteeringAssist sends vehicle mode over the configured communication path.,signals_communication
+The receiver mapping identifies GatewayComponent as the consumer of the battery state of charge signal.,signals_communication
+The HLD documents the direction and destination of the sensor validity signal.,signals_communication
+The communication design checks that BodyControlModule and PowertrainManager use matching signal definitions.,signals_communication
+The lamp status signal is mapped from the sender TorqueCoordinator to receiver SafetyMonitor.,signals_communication
+The signal routing configuration specifies how coolant temperature reaches BrakeManager.,signals_communication
+The BrakeManager publishes the lamp status signal for consumption by PowertrainManager.,signals_communication
+The SafetyMonitor receives the coolant temperature signal transmitted by SensorProcessor.,signals_communication
+The communication mapping links the requested torque signal to its receiving component.,signals_communication
+The signal configuration defines the update path for engine torque between components.,signals_communication
+The ClimateControl sends ambient temperature over the configured communication path.,signals_communication
+The receiver mapping identifies EngineController as the consumer of the brake status signal.,signals_communication
+The HLD documents the direction and destination of the diagnostic status signal.,signals_communication
+The communication design checks that DoorStatusMonitor and LightingController use matching signal definitions.,signals_communication
+The steering angle signal is mapped from the sender DiagnosticManager to receiver EngineController.,signals_communication
+The signal routing configuration specifies how fault information reaches BodyControlModule.,signals_communication
+The VehicleSpeedProvider publishes the steering angle signal for consumption by LightingController.,signals_communication
+The SensorProcessor receives the fault information signal transmitted by PowertrainManager.,signals_communication
+The communication mapping links the door status signal to its receiving component.,signals_communication
+The signal configuration defines the update path for vehicle mode between components.,signals_communication
+The WheelSpeedSensor sends battery state of charge over the configured communication path.,signals_communication
+The receiver mapping identifies TorqueCoordinator as the consumer of the sensor validity signal.,signals_communication
+The HLD documents the direction and destination of the wheel speed signal.,signals_communication
+The communication design checks that BatterySupervisor and SensorProcessor use matching signal definitions.,signals_communication
+The coolant temperature signal is mapped from the sender LightingController to receiver TemperatureMonitor.,signals_communication
+The signal routing configuration specifies how requested torque reaches ClimateControl.,signals_communication
+The TemperatureMonitor publishes the coolant temperature signal for consumption by DiagnosticManager.,signals_communication
+The TemperatureMonitor receives the requested torque signal transmitted by BodyControlModule.,signals_communication
+The communication mapping links the engine torque signal to its receiving component.,signals_communication
+The signal configuration defines the update path for ambient temperature between components.,signals_communication
+The EngineController sends brake status over the configured communication path.,signals_communication
+The receiver mapping identifies VehicleSpeedProvider as the consumer of the diagnostic status signal.,signals_communication
+The HLD documents the direction and destination of the vehicle speed signal.,signals_communication
+The communication design checks that TorqueCoordinator and GatewayComponent use matching signal definitions.,signals_communication
+The fault information signal is mapped from the sender SteeringAssist to receiver VehicleSpeedProvider.,signals_communication
+The signal routing configuration specifies how door status reaches BatterySupervisor.,signals_communication
+The SensorProcessor publishes the fault information signal for consumption by GatewayComponent.,signals_communication
+The VehicleSpeedProvider receives the door status signal transmitted by DoorStatusMonitor.,signals_communication
+The communication mapping links the vehicle mode signal to its receiving component.,signals_communication
+The signal configuration defines the update path for battery state of charge between components.,signals_communication
+The BrakeManager sends sensor validity over the configured communication path.,signals_communication
+The receiver mapping identifies PowertrainManager as the consumer of the wheel speed signal.,signals_communication
+The HLD documents the direction and destination of the lamp status signal.,signals_communication
+The communication design checks that DiagnosticManager and BrakeManager use matching signal definitions.,signals_communication
+The requested torque signal is mapped from the sender ClimateControl to receiver PowertrainManager.,signals_communication
+The signal routing configuration specifies how engine torque reaches LightingController.,signals_communication
+The PowertrainManager publishes the requested torque signal for consumption by EngineController.,signals_communication
+The BodyControlModule receives the engine torque signal transmitted by BatterySupervisor.,signals_communication
+The communication mapping links the ambient temperature signal to its receiving component.,signals_communication
+The signal configuration defines the update path for brake status between components.,signals_communication
+The VehicleSpeedProvider sends diagnostic status over the configured communication path.,signals_communication
+The receiver mapping identifies LightingController as the consumer of the vehicle speed signal.,signals_communication
+The HLD documents the direction and destination of the steering angle signal.,signals_communication
+The communication design checks that LightingController and TorqueCoordinator use matching signal definitions.,signals_communication
+The door status signal is mapped from the sender WheelSpeedSensor to receiver SteeringAssist.,signals_communication
+The signal routing configuration specifies how vehicle mode reaches SensorProcessor.,signals_communication
+The BodyControlModule publishes the door status signal for consumption by TorqueCoordinator.,signals_communication
+The SteeringAssist receives the vehicle mode signal transmitted by TorqueCoordinator.,signals_communication
+The communication mapping links the battery state of charge signal to its receiving component.,signals_communication
+The signal configuration defines the update path for sensor validity between components.,signals_communication
+The TemperatureMonitor sends wheel speed over the configured communication path.,signals_communication
+The receiver mapping identifies DiagnosticManager as the consumer of the lamp status signal.,signals_communication
+The HLD documents the direction and destination of the coolant temperature signal.,signals_communication
+The communication design checks that SteeringAssist and ClimateControl use matching signal definitions.,signals_communication
+The engine torque signal is mapped from the sender EngineController to receiver DiagnosticManager.,signals_communication
+The signal routing configuration specifies how ambient temperature reaches GatewayComponent.,signals_communication
+The DoorStatusMonitor publishes the engine torque signal for consumption by VehicleSpeedProvider.,signals_communication
+The BatterySupervisor receives the ambient temperature signal transmitted by DiagnosticManager.,signals_communication
+The communication mapping links the brake status signal to its receiving component.,signals_communication
+The signal configuration defines the update path for diagnostic status between components.,signals_communication
+The SensorProcessor sends vehicle speed over the configured communication path.,signals_communication
+The receiver mapping identifies GatewayComponent as the consumer of the steering angle signal.,signals_communication
+The HLD documents the direction and destination of the fault information signal.,signals_communication
+The communication design checks that ClimateControl and PowertrainManager use matching signal definitions.,signals_communication
+The vehicle mode signal is mapped from the sender BrakeManager to receiver SafetyMonitor.,signals_communication
+The signal routing configuration specifies how battery state of charge reaches BrakeManager.,signals_communication
+The BatterySupervisor publishes the vehicle mode signal for consumption by PowertrainManager.,signals_communication
+The SafetyMonitor receives the battery state of charge signal transmitted by LightingController.,signals_communication
+The communication mapping links the sensor validity signal to its receiving component.,signals_communication
+The signal configuration defines the update path for wheel speed between components.,signals_communication
+The PowertrainManager sends lamp status over the configured communication path.,signals_communication
+The receiver mapping identifies EngineController as the consumer of the coolant temperature signal.,signals_communication
+The HLD documents the direction and destination of the requested torque signal.,signals_communication
+The communication design checks that WheelSpeedSensor and LightingController use matching signal definitions.,signals_communication
+The ambient temperature signal is mapped from the sender VehicleSpeedProvider to receiver EngineController.,signals_communication
+The signal routing configuration specifies how brake status reaches BodyControlModule.,signals_communication
+The TorqueCoordinator publishes the ambient temperature signal for consumption by LightingController.,signals_communication
+The SensorProcessor receives the brake status signal transmitted by SteeringAssist.,signals_communication
+The communication mapping links the diagnostic status signal to its receiving component.,signals_communication
+The signal configuration defines the update path for vehicle speed between components.,signals_communication
+The BodyControlModule sends steering angle over the configured communication path.,signals_communication
